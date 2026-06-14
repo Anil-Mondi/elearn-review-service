@@ -8,9 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/reviews")
+@RequestMapping("/review")
 public class ReviewController {
 
+    @GetMapping("/test")
+    public String test() {
+        return "Review Service Working";
+    }
     @Autowired
     private ReviewService reviewService;
 
@@ -24,10 +28,6 @@ public class ReviewController {
         return reviewService.getAllReviews();
     }
 
-    @GetMapping("/reviews/test")
-    public String test() {
-        return "Review Service Working";
-    }
 
     @GetMapping("/{id}")
     public Review getReviewById(@PathVariable int id) {
