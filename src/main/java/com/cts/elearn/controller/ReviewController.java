@@ -24,6 +24,11 @@ public class ReviewController {
         return reviewService.getAllReviews();
     }
 
+    @GetMapping("/reviews/test")
+    public String test() {
+        return "Review Service Working";
+    }
+
     @GetMapping("/{id}")
     public Review getReviewById(@PathVariable int id) {
         return reviewService.getReviewById(id);
