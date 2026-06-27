@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.cts.elearn.dto.PurchaseHistoryResponse;
 
-@FeignClient(name = "purchasehistory-service")
+@FeignClient(name = "purchase-service")
 public interface PurchaseHistoryClient {
 
-    @GetMapping("/purchasehistory/learner/{learnerId}")
+    @GetMapping("/purchase-history/learner/{learnerId}")
     List<PurchaseHistoryResponse> getPurchasesByLearner(
         @PathVariable Long learnerId
     );
