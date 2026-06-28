@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "course-service", url = "http://localhost:8082")  // Make sure to use correct URL for course service
+@FeignClient(name = "course-service", url = "https://elearn-course-service.onrender.com")  // Make sure to use correct URL for course service
 public interface CourseClient {
     @GetMapping("/courses/{courseId}")
     CourseResponse getCourseById(@PathVariable("courseId") int courseId);
