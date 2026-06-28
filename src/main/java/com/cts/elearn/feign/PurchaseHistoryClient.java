@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.cts.elearn.dto.PurchaseHistoryResponse;
 
-@FeignClient(name = "purchase-service")
+@FeignClient(name = "purchase-service", url = "https://elearn-purchase-service.onrender.com")
 public interface PurchaseHistoryClient {
 
     @GetMapping("/purchase-history/learner/{learnerId}")
